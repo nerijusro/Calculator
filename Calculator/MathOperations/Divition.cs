@@ -13,7 +13,7 @@ namespace Calculator.MathOperations
                 throw new MathOperationException("Divition from 0 is not allowed.");
             }
 
-            return Task.FromResult(Convert.ToDecimal(numbers[0] / numbers[1]));
+            return Task.FromResult(Convert.ToDecimal(numbers[0]) / Convert.ToDecimal(numbers[1]));
         }
     }
 }
