@@ -1,7 +1,9 @@
-﻿namespace Calculator
+﻿using System.Threading.Tasks;
+
+namespace Calculator
 {
     public interface IMathOperation
     {
-        decimal Calculate(int[] numbers);
+        Task<decimal> Calculate(int[] numbers);
     }
 }

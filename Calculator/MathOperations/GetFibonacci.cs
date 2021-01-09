@@ -1,8 +1,11 @@
-﻿namespace Calculator.MathOperations
+﻿using System.Threading;
+using System.Threading.Tasks;
+
+namespace Calculator.MathOperations
 {
     public class GetFibonacci : IMathOperation
     {
-        public decimal Calculate(int[] numbers)
+        public async Task<decimal> Calculate(int[] numbers)
         {
             var nMinus2 = 0;
             var nMinus1 = 1;
@@ -14,6 +17,8 @@
                 nMinus2 = nMinus1;
                 nMinus1 = n;
             }
+
+            Thread.Sleep(5000);
 
             return n;
         }

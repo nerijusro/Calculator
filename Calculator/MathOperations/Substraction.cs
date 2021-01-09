@@ -1,10 +1,13 @@
-﻿namespace Calculator.MathOperations
+﻿using System;
+using System.Threading.Tasks;
+
+namespace Calculator.MathOperations
 {
     public class Substraction : IMathOperation
     {
-        public decimal Calculate(int[] numbers)
+        public Task<decimal> Calculate(int[] numbers)
         {
-            return numbers[0] / numbers[1];
+            return Task.FromResult(Convert.ToDecimal(numbers[0] - numbers[1]));
         }
     }
 }
